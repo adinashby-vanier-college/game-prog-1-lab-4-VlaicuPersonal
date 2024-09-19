@@ -17,6 +17,9 @@ public class Crocodile extends Actor
         eatCrab();
         moveAround();
         eatLobster();
+        if (isGameLost()) {
+            transitionToGameOverWorld();
+        }
     }
 
     /**
@@ -53,5 +56,29 @@ public class Crocodile extends Actor
             World world = getWorld();
             removeTouching(Lobster.class);
         }
+    }
+
+    /**
+     * 
+     */
+    public boolean isGameLost()
+    {
+        World world = getWorld();
+        if (world.getObjects(Crab.class).isEmpty()) {
+            return true;
+            
+        }
+        else {
+            return false;
+        }
+    }
+
+    /**
+     * 
+     */
+    public void transitionToGameOverWorld()
+    {
+        World gameOverWorld =  new  GameOverWorld();
+        Greenfoot.setWorld(gameOverWorld);
     }
 }
