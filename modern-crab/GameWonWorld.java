@@ -24,7 +24,7 @@ public class GameWonWorld extends World
     public void showTextWithBigBlackFont(String message, int x, int y)
     {
         GreenfootImage bg = getBackground();
-        Font font =  new  Font(50);
+        Font font =  new Font(50);
         bg.setFont(font);
         bg.setColor(Color.BLACK);
         bg.drawString(message, x, y);

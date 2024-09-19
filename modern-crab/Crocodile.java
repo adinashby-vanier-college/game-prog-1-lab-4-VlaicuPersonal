@@ -78,7 +78,7 @@ public class Crocodile extends Actor
      */
     public void transitionToGameOverWorld()
     {
-        World gameOverWorld =  new  GameOverWorld();
+        World gameOverWorld =  new GameOverWorld();
         Greenfoot.setWorld(gameOverWorld);
     }
 }

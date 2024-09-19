@@ -70,7 +70,7 @@ public class Crab extends Actor
      */
     public void transitionToGameWonWorld()
     {
-        World gameWonWorld =  new  GameWonWorld();
+        World gameWonWorld =  new GameWonWorld();
         Greenfoot.setWorld(gameWonWorld);
     }
 }

@@ -87,7 +87,7 @@ public class Lobster extends Actor
      */
     public void transitionToGameOverWorld()
     {
-        World gameOverWorld =  new  GameOverWorld();
+        World gameOverWorld =  new GameOverWorld();
         Greenfoot.setWorld(gameOverWorld);
     }
 
@@ -101,7 +101,7 @@ public class Lobster extends Actor
             World world = getWorld();
             int locationX = worm.getX();
             int locationY = worm.getY();
-            Actor lobster =  new  Lobster();
+            Actor lobster =  new Lobster();
             world.removeObject(worm);
             world.addObject(lobster, locationX, locationY);
         }
